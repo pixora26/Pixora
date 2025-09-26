@@ -55,7 +55,7 @@ h1, h2, a, button, .interactive-card {
 #home {
     position: relative;
     width: 100%;
-    height:70vh;       /* Full screen height */
+    height:100vh;       /* Full screen height */
     display: flex;
     align-items: center;
     justify-content: center;
