@@ -1,0 +1,94 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff86;
+}
+/* Specific elements with a pointer cursor */
+h1, h2, a, button, .interactive-card {
+    cursor: pointer;
+}
+/* Custom scrollbar for a smoother look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #e2e8f082;
+}
+::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 4px;
+}
+
+/* Fade-in animation for scroll */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition-delay: var(--delay, 0s);
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+/* Custom hover animation for headings */
+.heading-hover-effect:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+/* Active link style */
+.active-link {
+    color: #4f46e5; /* Tailwind's indigo-600 */
+    font-weight: 600; /* semibold */
+}
+
+/* Enforce same height for pricing cards */
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Section container */
+#home {
+    position: relative;
+    width: 100%;
+    height:80vh;       /* Full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Video behaves like a background */
+  #home video {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Fill like background-size: cover */
+    z-index: -1;         /* Push behind content */
+  }
+  
+  /* Content stays above video */
+  #home .content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Optional: Dark overlay for better text readability */
+  #home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4); /* adjust opacity */
+    z-index: 0;
+  }
+  
+
+
